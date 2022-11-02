@@ -38,6 +38,19 @@ minikube status
 <img width="382" alt="Capture d’écran 2022-11-02 à 15 48 29" src="https://user-images.githubusercontent.com/62488871/199521251-bbfa6b3a-c843-4631-8a8c-254286a7bb48.png">
 
 12. Reference configMap values in mongo-express deployment file
-<img width="461" alt="Capture d’écran 2022-11-02 à 15 49 22" src="https://user-images.githubusercontent.com/62488871/199521461-15931cb5-982d-4b31-9714-ccb7901db53a.png">
+<img width="440" alt="Capture d’écran 2022-11-02 à 15 56 43" src="https://user-images.githubusercontent.com/62488871/199523481-068d7baf-7963-4d17-b7c8-c77da9794c09.png">
 
 13. Create configMap then mongo-express deployment - order matters
+<img width="449" alt="Capture d’écran 2022-11-02 à 15 57 20" src="https://user-images.githubusercontent.com/62488871/199523641-0bfaa20a-dec3-4c8f-9358-99773e5c59c2.png">
+
+14. Add external service config in mongo-express deployment file
+<img width="461" alt="Capture d’écran 2022-11-02 à 16 02 18" src="https://user-images.githubusercontent.com/62488871/199524832-0fbf8a02-a8fc-4b47-9544-c98dd6c85042.png">
+
+15. Create external service
+<img width="575" alt="Capture d’écran 2022-11-02 à 16 00 51" src="https://user-images.githubusercontent.com/62488871/199524646-16514304-e631-46cf-9e2a-965bbd5b5d1c.png">
+
+16. Open running app in browser and check that data persists
+<img width="596" alt="Capture d’écran 2022-11-02 à 16 05 47" src="https://user-images.githubusercontent.com/62488871/199525645-90cd1e77-6b16-4c91-86d5-be6b038bd956.png">
+![Capture d’écran 2022-11-02 à 16 07 42](https://user-images.githubusercontent.com/62488871/199526117-421487d0-9505-4f05-a7c1-24237756d242.png)
+
+
