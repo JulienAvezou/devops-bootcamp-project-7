@@ -51,6 +51,7 @@ minikube status
 
 16. Open running app in browser and check that data persists
 <img width="596" alt="Capture d’écran 2022-11-02 à 16 05 47" src="https://user-images.githubusercontent.com/62488871/199525645-90cd1e77-6b16-4c91-86d5-be6b038bd956.png">
-![Capture d’écran 2022-11-02 à 16 07 42](https://user-images.githubusercontent.com/62488871/199526117-421487d0-9505-4f05-a7c1-24237756d242.png)
+
+<img width="596" alt="Capture d’écran 2022-11-02 à 16 05 47" src="https://user-images.githubusercontent.com/62488871/199526457-8948218c-b052-4718-a3d0-8dabd2562499.png">
 
 
