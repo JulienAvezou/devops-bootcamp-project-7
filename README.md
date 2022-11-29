@@ -1,5 +1,5 @@
 # devops-bootcamp-project-7
-Demo project for Module 10 - Container orchestration w K8s
+Demo projects for Module 10 - Container orchestration w K8s
 
 1. Install Minikube for local testing
 brew install minikube
@@ -53,5 +53,24 @@ minikube status
 <img width="596" alt="Capture d’écran 2022-11-02 à 16 05 47" src="https://user-images.githubusercontent.com/62488871/199525645-90cd1e77-6b16-4c91-86d5-be6b038bd956.png">
 
 <img width="596" alt="Capture d’écran 2022-11-02 à 16 05 47" src="https://user-images.githubusercontent.com/62488871/199526457-8948218c-b052-4718-a3d0-8dabd2562499.png">
+
+---------------
+
+Use Helm chart to deploy operator for Prometheus
+
+1. Install helm chart
+  helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+  helm repo update
+  helm install prometheus prometheus-community/kube-prometheus-stack
+<img width="661" alt="Capture d’écran 2022-11-29 à 15 23 59" src="https://user-images.githubusercontent.com/62488871/204555038-216994b0-3920-4a2b-8c68-3c4354068604.png">
+
+2. Make Grafana accessible via port forwarding
+  check which port grafana service is listening on - kubectl logs prometheus-grafana-6fdd6868b4-hw7mk -c grafana
+  <img width="664" alt="Capture d’écran 2022-11-29 à 15 46 21" src="https://user-images.githubusercontent.com/62488871/204560877-73442620-f4f9-4c9a-95d6-b94ac6587356.png">
+  port-forward - kubectl port-forward deployment/prometheus-grafana 3000
+  check grafan is accessible via browser on port 3000
+  <img width="966" alt="Capture d’écran 2022-11-29 à 15 49 31" src="https://user-images.githubusercontent.com/62488871/204561204-29d5a962-f0bf-47c1-a95e-7ccb2f802d8e.png">
+
+
 
 
