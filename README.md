@@ -113,3 +113,20 @@ Deploy Microservices App
   - access microservices through the browser using node ip + nodePort 
  
  <img width="668" alt="Capture d’écran 2022-12-01 à 00 47 58" src="https://user-images.githubusercontent.com/62488871/204933070-9766473b-a366-4650-a0fc-89f245cbc95d.png">
+ 
+ 
+ ---------------
+ 
+ Create Helm Chart for Microservices
+ 
+ 1. helm create <chart_name>
+ 
+ <img width="717" alt="Capture d’écran 2022-12-01 à 18 29 01" src="https://user-images.githubusercontent.com/62488871/205120671-cfb385be-f9db-4ad4-86f3-c37b735af243.png">
+ 
+ 2. create basic template files
+ 
+ <img width="522" alt="Capture d’écran 2022-12-01 à 18 53 01" src="https://user-images.githubusercontent.com/62488871/205125219-6a0e30ac-fe4e-432c-9f94-d9b61305c1d3.png">
+<img width="387" alt="Capture d’écran 2022-12-01 à 18 53 12" src="https://user-images.githubusercontent.com/62488871/205125225-75a20ebc-78ab-4b01-888a-5d77d212ba8d.png">
+
+  3. Set Values
+
