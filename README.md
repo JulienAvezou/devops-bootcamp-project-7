@@ -76,8 +76,9 @@ Use Helm chart to deploy operator for Prometheus
 Deploy Microservices App
 
 1. Create Deployment & Service Configurations for each microservice in config file
-example:
+
 ![Capture d’écran 2022-11-30 à 23 07 16](https://user-images.githubusercontent.com/62488871/204918598-2627dce9-8978-4c44-affb-7266d58dca3d.png)
+
  Considerations:
  - make sure that all microservices have the right connections using endpoints (service name + port)
  - make frontend microservice accessible from outside the cluster usign NodePort
@@ -85,23 +86,30 @@ example:
  
  
  2. Deploy Microservices into K8s cluster
+ 
   - create cluster on Linode 
+
 ![Capture d’écran 2022-12-01 à 00 27 57](https://user-images.githubusercontent.com/62488871/204933327-dfd6998c-2c62-4d23-9c90-c4ac48639092.png)
 
   - download kubeconfig file
 
   - set permissions of kubeconfig file to stricter ones
+
 ![Capture d’écran 2022-12-01 à 00 31 49](https://user-images.githubusercontent.com/62488871/204933289-0b3abf11-866c-42d3-a192-f7c39e9c1a57.png)
 
   - export KUBECONFIG variable to point to the file and check access to cluster
+
 ![Capture d’écran 2022-12-01 à 00 33 14](https://user-images.githubusercontent.com/62488871/204933256-d7583855-38f4-41ed-bb68-25a7d348c560.png)
 
   - create namespace
+
 ![Capture d’écran 2022-12-01 à 00 35 15](https://user-images.githubusercontent.com/62488871/204933222-9554f207-45bb-48bb-8e55-2534fa939f16.png)
 
   - deploy microservice app
+ 
 ![Capture d’écran 2022-12-01 à 00 41 58](https://user-images.githubusercontent.com/62488871/204933174-5aa3f573-7bf9-44f3-8a5f-509b7b0018c1.png)
 ![Capture d’écran 2022-12-01 à 00 45 27](https://user-images.githubusercontent.com/62488871/204933121-4f67cf22-6cd8-4df6-af88-8921e0983a11.png)
 
   - access microservices through the browser using node ip + nodePort 
+ 
  <img width="668" alt="Capture d’écran 2022-12-01 à 00 47 58" src="https://user-images.githubusercontent.com/62488871/204933070-9766473b-a366-4650-a0fc-89f245cbc95d.png">
