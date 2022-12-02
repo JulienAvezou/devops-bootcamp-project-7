@@ -130,3 +130,26 @@ Deploy Microservices App
 
   3. Set Values
 
+  set default values in values.yaml 
+
+<img width="914" alt="Capture d’écran 2022-12-02 à 22 15 17" src="https://user-images.githubusercontent.com/62488871/205388085-7c9807d6-fe5f-4d9c-aece-fef1b001a8e8.png">
+
+  create specific values files for each service -> eg. email service --> email-service-values.yaml
+
+<img width="986" alt="Capture d’écran 2022-12-02 à 22 15 25" src="https://user-images.githubusercontent.com/62488871/205388104-7dabe6f0-0734-4a64-bb38-76e148ad4a78.png">
+
+  check that values are valid: helm template -f <file_name> <chart_name>
+  double check linting: helm lint -f <file_name> <chart_name>
+
+<img width="558" alt="Capture d’écran 2022-12-02 à 22 25 30" src="https://user-images.githubusercontent.com/62488871/205389777-5c8bc5eb-0b2a-4d24-8f1b-e7262aac58ef.png">
+<img width="520" alt="Capture d’écran 2022-12-02 à 22 25 59" src="https://user-images.githubusercontent.com/62488871/205389809-b59109a3-746c-4d8d-a67f-b081cf1d3dfc.png">
+
+4. Deploy microservices
+
+  helm install -f <values_file> <release_name> <chart_name>
+  
+  <img width="668" alt="Capture d’écran 2022-12-02 à 22 36 23" src="https://user-images.githubusercontent.com/62488871/205393367-83f3f9ec-eb85-47c0-a4fb-7a162ebae3f5.png">
+  
+  repeat this step for all microservices you want to deploy as part of the app, if config changes too much for a service, can create another chart(s) to handle the template and values
+  
+
