@@ -150,6 +150,10 @@ Deploy Microservices App
   
   <img width="668" alt="Capture d’écran 2022-12-02 à 22 36 23" src="https://user-images.githubusercontent.com/62488871/205393367-83f3f9ec-eb85-47c0-a4fb-7a162ebae3f5.png">
   
-  repeat this step for all microservices you want to deploy as part of the app, if config changes too much for a service, can create another chart(s) to handle the template and values
+  can uninstall with: helm uninstall <release_name>
   
+  repeat this step for all microservices you want to deploy as part of the app, if config changes too much for a service, can create another chart(s) to  handle the template and values. 
+  Can use a Helmfile to declare a definition of an entire K8s cluster in single yaml file to deploy
+  
+![Capture d’écran 2022-12-03 à 16 20 53](https://user-images.githubusercontent.com/62488871/205448347-e79dfee2-548d-4941-8847-6ffa58fe1b34.png)
 
