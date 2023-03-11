@@ -1,5 +1,5 @@
 # devops-bootcamp-project-7
-Demo projects for Module 10 - Container orchestration w K8s
+Demo projects for Module 10 - Container orchestration with K8s
 
 1. Install Minikube for local testing
 brew install minikube
@@ -70,7 +70,7 @@ Use Helm chart to deploy operator for Prometheus
   port-forward - kubectl port-forward deployment/prometheus-grafana 3000
   check grafan is accessible via browser on port 3000
   <img width="966" alt="Capture d’écran 2022-11-29 à 15 49 31" src="https://user-images.githubusercontent.com/62488871/204561204-29d5a962-f0bf-47c1-a95e-7ccb2f802d8e.png">
-  
+
 ---------------
 
 Deploy Microservices App
@@ -83,11 +83,11 @@ Deploy Microservices App
  - make sure that all microservices have the right connections using endpoints (service name + port)
  - make frontend microservice accessible from outside the cluster usign NodePort
  - mount volume into redis microservice (emptyDir is good use case here)
- 
- 
+
+
  2. Deploy Microservices into K8s cluster
- 
-  - create cluster on Linode 
+
+  - create cluster on Linode
 
 ![Capture d’écran 2022-12-01 à 00 27 57](https://user-images.githubusercontent.com/62488871/204933327-dfd6998c-2c62-4d23-9c90-c4ac48639092.png)
 
@@ -106,31 +106,31 @@ Deploy Microservices App
 ![Capture d’écran 2022-12-01 à 00 35 15](https://user-images.githubusercontent.com/62488871/204933222-9554f207-45bb-48bb-8e55-2534fa939f16.png)
 
   - deploy microservice app
- 
+
 ![Capture d’écran 2022-12-01 à 00 41 58](https://user-images.githubusercontent.com/62488871/204933174-5aa3f573-7bf9-44f3-8a5f-509b7b0018c1.png)
 ![Capture d’écran 2022-12-01 à 00 45 27](https://user-images.githubusercontent.com/62488871/204933121-4f67cf22-6cd8-4df6-af88-8921e0983a11.png)
 
-  - access microservices through the browser using node ip + nodePort 
- 
+  - access microservices through the browser using node ip + nodePort
+
  <img width="668" alt="Capture d’écran 2022-12-01 à 00 47 58" src="https://user-images.githubusercontent.com/62488871/204933070-9766473b-a366-4650-a0fc-89f245cbc95d.png">
- 
- 
+
+
  ---------------
- 
+
  Create Helm Chart for Microservices
- 
+
  1. helm create <chart_name>
- 
+
  <img width="717" alt="Capture d’écran 2022-12-01 à 18 29 01" src="https://user-images.githubusercontent.com/62488871/205120671-cfb385be-f9db-4ad4-86f3-c37b735af243.png">
- 
+
  2. create basic template files
- 
+
  <img width="522" alt="Capture d’écran 2022-12-01 à 18 53 01" src="https://user-images.githubusercontent.com/62488871/205125219-6a0e30ac-fe4e-432c-9f94-d9b61305c1d3.png">
 <img width="387" alt="Capture d’écran 2022-12-01 à 18 53 12" src="https://user-images.githubusercontent.com/62488871/205125225-75a20ebc-78ab-4b01-888a-5d77d212ba8d.png">
 
   3. Set Values
 
-  set default values in values.yaml 
+  set default values in values.yaml
 
 <img width="914" alt="Capture d’écran 2022-12-02 à 22 15 17" src="https://user-images.githubusercontent.com/62488871/205388085-7c9807d6-fe5f-4d9c-aece-fef1b001a8e8.png">
 
@@ -147,13 +147,13 @@ Deploy Microservices App
 4. Deploy microservices
 
   helm install -f <values_file> <release_name> <chart_name>
-  
+
   <img width="668" alt="Capture d’écran 2022-12-02 à 22 36 23" src="https://user-images.githubusercontent.com/62488871/205393367-83f3f9ec-eb85-47c0-a4fb-7a162ebae3f5.png">
-  
+
   can uninstall with: helm uninstall <release_name>
-  
-  repeat this step for all microservices you want to deploy as part of the app, if config changes too much for a service, can create another chart(s) to  handle the template and values. 
+
+  repeat this step for all microservices you want to deploy as part of the app, if config changes too much for a service, can create another chart(s) to  handle the template and values.
   Can use a Helmfile to declare a definition of an entire K8s cluster in single yaml file to deploy
-  
+
 ![Capture d’écran 2022-12-03 à 16 20 53](https://user-images.githubusercontent.com/62488871/205448347-e79dfee2-548d-4941-8847-6ffa58fe1b34.png)
 
